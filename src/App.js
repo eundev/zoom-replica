@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ChatRoom from "./Components/ChatRoom/index";
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+import RoomCreationPage from './Pages/RoomCreation/index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/rooms" component={RoomCreationPage}/>
+        <Route exact path="/rooms/:id" component={ChatRoom}/>
+        <Redirect to="/rooms"/>
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
+

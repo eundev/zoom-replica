@@ -1,0 +1,22 @@
+#react-jitsi-container{
+    width: 100vw !important;
+    height: 100vh !important;
+    .watermark {
+        display: none !important;
+    }
+}
+
+
+.room-options-wrap{
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .room-options-card{
+        width: 400px;
+    }
+}
+
